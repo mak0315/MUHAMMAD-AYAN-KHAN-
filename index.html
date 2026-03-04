@@ -345,8 +345,8 @@
   <h2 class="section-title">A Story of <em>Many Passions</em></h2>
   <div class="about-grid">
     <div class="about-text reveal-l">
-      <p>Hello — I'm <strong>Muhammad Ayan Khan</strong>, a multidisciplinary creator based in Abbottabad, Pakistan. My journey spans continents and crafts — from serving as a <strong>Former Security Officer</strong> at Golden Eagle Security in <strong>Qatar</strong>, to the literary world as a published author, to the lens of a photographer with over <strong>15,000 Instagram followers</strong>.</p>
-      <p>I was a <strong>Club Cricket Player</strong> and the founder of <strong>Havelian Kings</strong> — sport shaped my discipline and leadership. Today I channel that drive into building two startups (<strong>Kor Da</strong> &amp; <strong>Pactum</strong>), managing Airbnb properties in Islamabad, freelancing globally, and creating content that moves people.</p>
+      <p>Hello I'm <strong>Muhammad Ayan Khan</strong>, a multidisciplinary creator based in Abbottabad, Pakistan. My journey spans continents and crafts  from serving as a <strong>Former Security Officer</strong> at Golden Eagle Security in <strong>Qatar</strong>, to the literary world as a published author, to the lens of a photographer with over <strong>15,000 Instagram followers</strong>.</p>
+      <p>I was a <strong>Club Cricket Player</strong> and the founder of <strong>Havelian Kings</strong> sport shaped my discipline and leadership. Today I channel that drive into building two startups (<strong>Kor Da</strong> &amp; <strong>Pactum</strong>), managing Airbnb properties in Islamabad, freelancing globally, and creating content that moves people.</p>
       <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:28px;">Let's Connect</a>
     </div>
     <div class="about-stats stagger reveal-r">
@@ -362,7 +362,7 @@
 
 <!-- WHAT I DO -->
 <section class="reveal" id="work" style="background:var(--black);padding:110px 64px;">
-  <div class="section-label">02 — What I Do</div>
+  <div class="section-label">02  What I Do</div>
   <h2 class="section-title">Crafted with <em>Purpose</em></h2>
   <div class="cards-grid stagger">
     <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">01</div><span class="card-icon">💻</span><h3 class="card-title">Web Development</h3><p class="card-text">Building clean, functional websites with modern HTML &amp; CSS. Expanding into full-stack development with a passion for creating meaningful digital experiences.</p><a href="https://www.fiverr.com/muhammadayan311?public_mode=true" target="_blank" class="card-link">Hire Me on Fiverr →</a></div>
@@ -392,48 +392,149 @@
 
 <div class="divider"><div class="div-line"></div><div class="div-gem"></div><div class="div-line"></div></div>
 
-<!-- VIDEOS -->
-<section class="videos reveal" id="videos">
-  <div class="section-label">04 — Videos &amp; Reels</div>
-  <h2 class="section-title">Behind the <em>Lens</em></h2>
-  <p class="video-intro">Short films, photography reels, and behind-the-scenes moments — catch my video work on YouTube and TikTok.</p>
-  <div class="video-grid stagger">
-    <!-- TO ADD A VIDEO: replace the entire .video-placeholder div with:
-         <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-         For YouTube Shorts use the same embed format. -->
-    <div class="video-slot">
-      <div class="video-placeholder">
-        <div class="video-play">▶</div>
-        <div class="video-slot-title">Photography Reel</div>
-        <div class="video-slot-sub">YouTube · Short</div>
-        <div class="video-hint">Paste your YouTube embed URL here</div>
-      </div>
-    </div>
-    <div class="video-slot">
-      <div class="video-placeholder">
-        <div class="video-play">▶</div>
-        <div class="video-slot-title">Behind the Scenes</div>
-        <div class="video-slot-sub">YouTube · Short</div>
-        <div class="video-hint">Paste your YouTube embed URL here</div>
-      </div>
-    </div>
-    <div class="video-slot">
-      <div class="video-placeholder">
-        <div class="video-play">▶</div>
-        <div class="video-slot-title">Street Photography</div>
-        <div class="video-slot-sub">TikTok · Reel</div>
-        <div class="video-hint">Paste your YouTube embed URL here</div>
-      </div>
-    </div>
-  </div>
-  <div class="video-cta">
-    <a href="https://www.youtube.com/@MuhammadAyanKhan" target="_blank" class="btn-primary">Watch on YouTube</a>
-    <a href="https://www.tiktok.com/@stupid_soul1" target="_blank" class="btn-outline">Follow on TikTok</a>
-    <p class="video-note">To add a video: open the HTML file, find the video-slot you want, and replace<br>the video-placeholder div with an iframe containing your YouTube embed link.</p>
-  </div>
-</section>
+<!-- VIDEOS SECTION -->
+<section class="videos" id="videos">
 
-<div class="divider"><div class="div-line"></div><div class="div-gem"></div><div class="div-line"></div></div>
+<style>
+.videos{
+  padding:80px 8%;
+  text-align:center;
+}
+
+.section-label{
+  font-size:14px;
+  letter-spacing:3px;
+  color:#888;
+}
+
+.section-title{
+  font-size:40px;
+  margin:10px 0 20px;
+}
+
+.video-intro{
+  max-width:600px;
+  margin:auto;
+  color:#666;
+}
+
+.video-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+.video-slot{
+  position:relative;
+  width:100%;
+  height:420px;
+  border-radius:12px;
+  overflow:hidden;
+  background:#000;
+}
+
+.video-slot video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.video-info{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:15px;
+  background:linear-gradient(transparent,rgba(0,0,0,0.8));
+  color:white;
+  text-align:left;
+}
+
+.video-slot-title{
+  font-size:18px;
+  font-weight:600;
+}
+
+.video-slot-sub{
+  font-size:13px;
+  opacity:0.8;
+}
+
+.video-cta{
+  margin-top:40px;
+}
+
+.btn-primary{
+  padding:12px 25px;
+  background:black;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  margin-right:10px;
+}
+
+.btn-outline{
+  padding:12px 25px;
+  border:2px solid black;
+  color:black;
+  text-decoration:none;
+  border-radius:6px;
+}
+</style>
+
+<div class="section-label">04 — Videos & Reels</div>
+<h2 class="section-title">Behind the <em>Lens</em></h2>
+<p class="video-intro">
+Short films, photography reels, and behind-the-scenes moments — catch my video work on YouTube and TikTok.
+</p>
+
+<div class="video-grid">
+
+<!-- VIDEO 1 -->
+<div class="video-slot">
+<video autoplay muted loop playsinline>
+<source src="./videos/video 1.mp4" type="video/mp4">
+</video>
+
+<div class="video-info">
+<div class="video-slot-title">before and after</div>
+<div class="video-slot-sub">YouTube · Short</div>
+</div>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="video-slot">
+<video autoplay muted loop playsinline>
+<source src="./videos/video2.mp4" type="video/mp4">
+</video>
+
+<div class="video-info">
+<div class="video-slot-title">before and after</div>
+<div class="video-slot-sub">YouTube · Short</div>
+</div>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="video-slot">
+<video autoplay muted loop playsinline>
+<source src="./videos/video3.mp4" type="video/mp4">
+</video>
+
+<div class="video-info">
+<div class="video-slot-title">before and after</div>
+<div class="video-slot-sub">TikTok · Reel</div>
+</div>
+</div>
+
+</div>
+
+<div class="video-cta">
+<a href="https://www.youtube.com/@MuhammadAyanKhan" target="_blank" class="btn-primary">Watch on YouTube</a>
+<a href="https://www.tiktok.com/@stupid_soul1" target="_blank" class="btn-outline">Follow on TikTok</a>
+</div>
+
+</section>
 
 <!-- AUTHOR -->
 <section class="author reveal" id="author">
