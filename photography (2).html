@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography — Muhammad Ayan Khan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Archivo:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black:#050505;--deep:#0a0a0a;--card:#0f0f0f;--border:#1c1c1c;
+      --gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:rgba(201,168,76,0.12);
+      --white:#f5f0e8;--muted:#6e6e6a;--text:#c8c4ba;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--text);font-family:'Archivo',sans-serif;font-weight:300;overflow-x:hidden;cursor:none}
+    .cursor{position:fixed;width:8px;height:8px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .2s,height .2s}
+    .cursor-ring{position:fixed;width:38px;height:38px;border:1px solid rgba(201,168,76,.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .4s cubic-bezier(.16,1,.3,1),height .4s,border-color .3s}
+    .cursor.big{width:14px;height:14px}.cursor-ring.big{width:62px;height:62px;border-color:var(--gold)}
+    body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;opacity:.5}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:26px 64px;display:flex;align-items:center;justify-content:space-between;transition:padding .4s,background .4s,border-color .4s;border-bottom:1px solid transparent}
+    nav.scrolled{padding:14px 64px;background:rgba(5,5,5,.93);backdrop-filter:blur(24px);border-bottom-color:var(--border)}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+    .nav-back{display:flex;align-items:center;gap:10px;color:var(--muted);text-decoration:none;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;transition:color .3s}
+    .nav-back:hover{color:var(--gold)}
+
+    /* HERO */
+    .hero{height:90vh;display:flex;align-items:flex-end;padding:80px 64px;position:relative;overflow:hidden;background:var(--deep)}
+    .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 75% 55% at 50% 35%,rgba(201,168,76,.04),transparent 65%),linear-gradient(180deg,transparent 50%,rgba(5,5,5,.75) 100%)}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.02) 1px,transparent 1px);background-size:80px 80px;animation:gridMove 25s linear infinite}
+    @keyframes gridMove{from{transform:translate(0,0)}to{transform:translate(80px,80px)}}
+    .deco-word{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'DM Serif Display',serif;font-size:clamp(8rem,19vw,19rem);font-weight:400;color:transparent;-webkit-text-stroke:1px rgba(201,168,76,.055);white-space:nowrap;pointer-events:none;user-select:none;letter-spacing:-.02em}
+    .hero-content{position:relative;z-index:2}
+    .hero-tag{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-dim);padding:7px 18px;display:inline-block;margin-bottom:26px;animation:fadeUp 1s ease both}
+    .hero-title{font-family:'DM Serif Display',serif;font-size:clamp(3rem,7.5vw,7rem);font-weight:400;color:var(--white);line-height:.92;letter-spacing:-.02em;animation:fadeUp 1s ease .2s both}
+    .hero-title em{font-style:italic;color:var(--gold);display:block}
+    .hero-sub{margin-top:22px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);animation:fadeUp 1s ease .4s both}
+    .hero-count{position:absolute;bottom:88px;right:64px;text-align:right;z-index:2;animation:fadeUp 1s ease .6s both}
+    .hero-count-num{font-family:'DM Serif Display',serif;font-size:3.5rem;color:var(--gold);line-height:1}
+    .hero-count-label{font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+
+    /* FILTER */
+    .filter-bar{padding:28px 64px;background:var(--deep);border-bottom:1px solid var(--border);display:flex;gap:8px;flex-wrap:wrap;align-items:center;position:sticky;top:57px;z-index:400;backdrop-filter:blur(16px)}
+    .filter-label{font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-right:12px}
+    .filter-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:8px 20px;font-family:'Archivo',sans-serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;border-radius:100px;transition:all .3s}
+    .filter-btn.on,.filter-btn:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim)}
+
+    /* GALLERY */
+    .gallery-section{padding:52px 64px 100px}
+    .gallery-grid{columns:3;column-gap:5px}
+    .gallery-item{break-inside:avoid;margin-bottom:5px;position:relative;overflow:hidden;cursor:pointer}
+    .gallery-item img{display:block;width:100%;filter:saturate(.85) contrast(1.04);transition:transform .7s cubic-bezier(.16,1,.3,1),filter .5s}
+    .gallery-item:hover img{transform:scale(1.04);filter:saturate(1.05) contrast(1)}
+    .g-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,.8),transparent 50%);opacity:0;transition:opacity .4s;display:flex;flex-direction:column;justify-content:flex-end;padding:20px}
+    .gallery-item:hover .g-overlay{opacity:1}
+    .g-title{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--white)}
+    .g-cat{font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-top:4px}
+
+    /* INSTAGRAM */
+    .insta-section{background:var(--deep);padding:64px;text-align:center;border-top:1px solid var(--border)}
+    .insta-section h2{font-family:'DM Serif Display',serif;font-size:2.2rem;font-style:italic;color:var(--white);margin-bottom:10px}
+    .insta-section p{font-size:.82rem;color:var(--muted);letter-spacing:.1em;margin-bottom:36px}
+    .insta-links{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .insta-link{background:var(--card);border:1px solid var(--border);color:var(--muted);text-decoration:none;padding:12px 24px;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;border-radius:2px;transition:all .3s}
+    .insta-link:hover{border-color:var(--gold);color:var(--gold)}
+
+    /* LIGHTBOX */
+    .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.96);z-index:9995;align-items:center;justify-content:center;flex-direction:column;gap:20px}
+    .lightbox.open{display:flex}
+    .lb-img{max-width:92vw;max-height:85vh;object-fit:contain}
+    .lb-close{position:absolute;top:28px;right:36px;color:var(--gold);font-size:1.4rem;cursor:pointer;background:none;border:none;font-family:'Cormorant Garamond',serif;letter-spacing:.1em;opacity:.8;transition:opacity .2s}
+    .lb-close:hover{opacity:1}
+    .lb-nav{display:flex;gap:24px;align-items:center}
+    .lb-btn{background:none;border:1px solid var(--border);color:var(--muted);padding:10px 22px;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .3s}
+    .lb-btn:hover{border-color:var(--gold);color:var(--gold)}
+    .lb-counter{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+    /* FOOTER */
+    footer{background:var(--black);border-top:1px solid var(--border);padding:40px 64px;display:flex;align-items:center;justify-content:space-between}
+    .f-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
+    .f-copy{font-size:.6rem;letter-spacing:.1em;color:var(--muted)}
+    .f-links{display:flex;gap:24px}
+    .f-links a{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
+    .f-links a:hover{color:var(--gold)}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+    .reveal.on{opacity:1;transform:translateY(0)}
+
+    @media(max-width:900px){
+      nav{padding:16px 24px}nav.scrolled{padding:12px 24px}
+      .hero{padding:80px 24px 52px}.hero-count{display:none}
+      .filter-bar,.gallery-section,.insta-section{padding:20px 24px}
+      .gallery-grid{columns:2}
+      footer{flex-direction:column;gap:14px;text-align:center}
+    }
+    @media(max-width:560px){.gallery-grid{columns:1}}
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/photography.css">
+</head>
+<body>
+
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="ring"></div>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">M · A · K</a>
+  <a href="index.html" class="nav-back">← Back to Portfolio</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="deco-word">LIGHT</div>
+  <div class="hero-content">
+    <div class="hero-tag">Visual Stories by Muhammad Ayan Khan</div>
+    <h1 class="hero-title">The Art of<em>Photography</em></h1>
+    <p class="hero-sub">Portraits · Landscapes · Street · Nature</p>
+  </div>
+  <div class="hero-count">
+    <div class="hero-count-num">15K+</div>
+    <div class="hero-count-label">Instagram Followers</div>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="filter-bar">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn on" data-cat="all">All</button>
+  <button class="filter-btn" data-cat="portrait">Portrait</button>
+  <button class="filter-btn" data-cat="landscape">Landscape</button>
+  <button class="filter-btn" data-cat="street">Street</button>
+  <button class="filter-btn" data-cat="nature">Nature</button>
+</div>
+
+<!-- GALLERY -->
+<section class="gallery-section reveal">
+  <div class="gallery-grid" id="gallery">
+
+    <div class="gallery-item" data-cat="portrait">
+      <img src="images/IMG 11.jpg" alt="Portrait photography by Muhammad Ayan Khan">
+      <div class="g-overlay"><div class="g-title">Portrait I</div><div class="g-cat">Portrait</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="landscape">
+      <img src="images/IMG10.jpg" alt="Landscape photography by Muhammad Ayan Khan">
+      <div class="g-overlay"><div class="g-title">Landscape I</div><div class="g-cat">Landscape</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="street">
+      <img src="images/IMG3.jpg" alt="Street photography by Muhammad Ayan Khan">
+      <div class="g-overlay"><div class="g-title">Street I</div><div class="g-cat">Street</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="portrait">
+      <img src="images/IMG9.jpg" alt="Portrait photography by Muhammad Ayan Khan">
+      <div class="g-overlay"><div class="g-title">Portrait II</div><div class="g-cat">Portrait</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="nature">
+      <img src="images/IMG5.jpg" alt="Nature photography by Muhammad Ayan Khan">
+      <div class="g-overlay"><div class="g-title">Nature I</div><div class="g-cat">Nature</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="landscape">
+      <img src="images/IMG8 POT3.jpg" alt="Landscape photography by Muhammad Ayan Khan">
+      <div class="g-overlay"><div class="g-title">Landscape II</div><div class="g-cat">Landscape</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="street">
+      <img src="images/phootography.jpg" alt="Street photography by Muhammad Ayan Khan">
+      <div class="g-overlay"><div class="g-title">Street II</div><div class="g-cat">Street</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="portrait">
+      <img src="images/IMG4.jpg" alt="Portrait photography by Muhammad Ayan Khan">
+      <div class="g-overlay"><div class="g-title">Portrait III</div><div class="g-cat">Portrait</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="nature">
+      <img src="images/ph1.jpg" alt="Nature photography by Muhammad Ayan Khan">
+      <div class="g-overlay"><div class="g-title">Nature II</div><div class="g-cat">Nature</div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<div class="insta-section">
+  <h2>Also on Instagram</h2>
+  <p>@stupid._soul — More of my photography work</p>
+  <div class="insta-links">
+    <a href="https://www.instagram.com/stupid._soul/p/CYI2eG2r7CB/" target="_blank" class="insta-link">Work 01</a>
+    <a href="https://www.instagram.com/stupid._soul/p/CG7T3OFs_x9/" target="_blank" class="insta-link">Work 02</a>
+    <a href="https://www.instagram.com/p/ClZK00PLQXI/" target="_blank" class="insta-link">Work 03</a>
+    <a href="https://www.instagram.com/stupid._soul/" target="_blank" class="insta-link" style="border-color:var(--gold);color:var(--gold);">View Full Instagram →</a>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lb">
+  <button class="lb-close" id="lbClose">✕ Close</button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <div class="lb-nav">
+    <button class="lb-btn" id="lbPrev">← Prev</button>
+    <span class="lb-counter" id="lbCounter">1 / 9</span>
+    <button class="lb-btn" id="lbNext">Next →</button>
+  </div>
+</div>
+
+<footer>
+  <div class="f-logo">M · A · K</div>
+  <div class="f-copy">© 2026 Muhammad Ayan Khan</div>
+  <div class="f-links">
+    <a href="index.html">Portfolio</a>
+    <a href="https://www.fiverr.com/muhammadayan311?public_mode=true" target="_blank">Fiverr</a>
+    <a href="https://www.instagram.com/stupid._soul/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/MAK111111/" target="_blank">Facebook</a>
+    <a href="https://www.tiktok.com/@stupid_soul1" target="_blank">TikTok</a>
+  </div>
+</footer>
+
+<script>
+  // Cursor
+  const cur=document.getElementById('cur'),ring=document.getElementById('ring');
+  let cx=0,cy=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY;cur.style.left=cx+'px';cur.style.top=cy+'px'});
+  (function t(){rx+=(cx-rx)*.1;ry+=(cy-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(t)})();
+  document.querySelectorAll('a,button,.gallery-item').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{cur.classList.add('big');ring.classList.add('big')});
+    el.addEventListener('mouseleave',()=>{cur.classList.remove('big');ring.classList.remove('big')});
+  });
+
+  // Nav
+  const nav=document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+
+  // Reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Filter
+  let activecat='all';
+  document.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('on'));
+      btn.classList.add('on');
+      activecat=btn.dataset.cat;
+      document.querySelectorAll('.gallery-item').forEach(item=>{
+        const show=activecat==='all'||item.dataset.cat===activecat;
+        item.style.display=show?'':'none';
+        if(show){item.style.animation='fadeUp .45s ease both'}
+      });
+    });
+  });
+
+  // Lightbox with prev/next
+  const imgs=[...document.querySelectorAll('.gallery-item img')];
+  let lbIdx=0;
+  function openLb(i){
+    lbIdx=i;
+    document.getElementById('lbImg').src=imgs[i].src;
+    document.getElementById('lbCounter').textContent=(i+1)+' / '+imgs.length;
+    document.getElementById('lb').classList.add('open');
+  }
+  imgs.forEach((img,i)=>img.addEventListener('click',()=>openLb(i)));
+  document.getElementById('lbClose').addEventListener('click',()=>document.getElementById('lb').classList.remove('open'));
+  document.getElementById('lbPrev').addEventListener('click',()=>openLb((lbIdx-1+imgs.length)%imgs.length));
+  document.getElementById('lbNext').addEventListener('click',()=>openLb((lbIdx+1)%imgs.length));
+  document.getElementById('lb').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.classList.remove('open')});
+  document.addEventListener('keydown',e=>{
+    if(!document.getElementById('lb').classList.contains('open'))return;
+    if(e.key==='ArrowRight') openLb((lbIdx+1)%imgs.length);
+    if(e.key==='ArrowLeft') openLb((lbIdx-1+imgs.length)%imgs.length);
+    if(e.key==='Escape') document.getElementById('lb').classList.remove('open');
+  });
+</script>
+<script src="js/photography.js"></script>
+</body>
+</html>
