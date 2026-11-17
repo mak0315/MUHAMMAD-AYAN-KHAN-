@@ -11,6 +11,7 @@
 <meta name="google-site-verification" content="R2yFU9mDjzYl1rT2F3CDGbj6dj1ib2wmOthdOelJxMI" />
 
   <title>Muhammad Ayan Khan | Founder · Author · Creator</title>
+  <link rel="canonical" href="https://muhammad-ayan-khan-opal.vercel.app/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
@@ -102,7 +103,7 @@
       font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase;
       color: var(--gold); text-decoration: none;
     }
-    .nav-links { display: flex; gap: 34px; list-style: none; align-items: center; }
+    .nav-links { display: flex; gap: clamp(14px, 2vw, 34px); list-style: none; align-items: center; }
     .nav-links a {
       color: var(--muted); text-decoration: none;
       font-family: var(--font-body); font-size: 0.65rem;
@@ -162,6 +163,7 @@
       display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(15,15,14,0.97); backdrop-filter: blur(20px);
       z-index: 550; flex-direction: column; align-items: center; justify-content: center;
+      overflow-y: auto; padding: 80px 0 26px;
     }
     .mobile-menu.open { display: flex; }
     .mobile-menu a {
@@ -878,7 +880,7 @@
       font-family: var(--font-body); font-size: 0.6rem;
       letter-spacing: 0.1em; color: var(--muted);
     }
-    .f-links { display: flex; gap: 26px; }
+    .f-links { display: flex; flex-wrap: wrap; justify-content: flex-end; flex: 1 1 auto; min-width: 0; gap: 14px 26px; }
     .f-links a {
       font-family: var(--font-body); font-size: 0.58rem;
       letter-spacing: 0.18em; text-transform: uppercase;
@@ -904,6 +906,14 @@
     .stagger.on > *:nth-child(5){opacity:1;transform:none;transition-delay:.36s}
     .stagger.on > *:nth-child(6){opacity:1;transform:none;transition-delay:.44s}
     .stagger.on > *:nth-child(7){opacity:1;transform:none;transition-delay:.52s}
+
+    /* Keep the expanded navigation usable on smaller laptops */
+    @media(min-width:901px) and (max-width:1180px) {
+      nav { padding-left: 32px; padding-right: 32px; }
+      nav.scrolled { padding-left: 32px; padding-right: 32px; }
+      .nav-links { gap: 14px; }
+      .nav-links a { font-size: 0.6rem; letter-spacing: 0.14em; }
+    }
 
     /* ═══════════════════════════════════════════
        MOBILE RESPONSIVE — 900px
@@ -975,7 +985,7 @@
       .contact-info h3 { font-size: 1.4rem; }
       .submit-btn { width: 100%; text-align: center; align-self: stretch; padding: 18px; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 22px; }
-      .f-links { flex-wrap: wrap; justify-content: center; gap: 14px; }
+      .f-links { flex-wrap: wrap; justify-content: center; gap: 14px; width: 100%; }
     }
     @media(max-width:480px) {
       .hero-name { font-size: clamp(2.6rem, 14vw, 3.4rem); }
@@ -993,27 +1003,30 @@
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" id="menuClose" aria-label="Close menu">&#x2715;</button>
-  <a href="#about">About</a>
-  <a href="#work">Work</a>
-  <a href="#photography">Photos</a>
-  <a href="#videos">Videos</a>
-  <a href="#author">Author</a>
-  <a href="#startups">Startups</a>
-  <a href="#interests">Chess</a>
-  <a href="#contact">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="startups.html">Startups</a>
+  <a href="projects.html">Projects</a>
+  <a href="experience.html">Experience</a>
+  <a href="creative.html">Creative</a>
+  <a href="writing.html">Writing</a>
+  <a href="interests.html">Interests</a>
+  <a href="contact.html">Contact</a>
 </div>
 
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">M · A · K</a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#photography">Photos</a></li>
-    <li><a href="#videos">Videos</a></li>
-    <li><a href="#author">Author</a></li>
-    <li><a href="#startups">Startups</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="startups.html">Startups</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="creative.html">Creative</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="interests.html">Interests</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul> 
   <button class="nav-burger" id="navBurger" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -1034,7 +1047,7 @@
   <div class="hero-vline"></div>
   <div class="hero-content">
     <div class="hero-eyebrow"><span class="eyebrow-dot"></span>Founder · Author · Creator</div>
-    <h1 class="hero-name">Muhammad<em>Ayan Khan</em></h1>
+    <h1 class="hero-name">Muhammad <em>Ayan Khan</em></h1>
 
     <!-- Cycling roles -->
     <div class="hero-cycling" id="heroCycling">
@@ -1053,7 +1066,7 @@
       <span class="role-pill">BBIT Student</span>
     </div>
     <div class="hero-actions">
-      <a href="#work" class="btn-primary btn-pulse">Explore My Work</a>
+      <a href="projects.html" class="btn-primary btn-pulse">Explore My Work</a>
       <a href="photography.html" class="btn-outline">View Photography</a>
     </div>
   </div>
@@ -1080,10 +1093,14 @@
   <div class="about-grid">
     <div class="about-text reveal-l">
       <p>I started my professional journey as a Security Officer in <strong>Qatar</strong> — discipline, pressure, and purpose shaped me there.</p>
-      <p>Returning to Pakistan, I channeled that drive into technology and business. I built websites, launched startups, and published a book. Today I'm pursuing my <strong>Bachelor's in BBIT</strong> while running ventures and creating content from Havelian.</p>
+      <p>Returning to Pakistan, I channeled that drive into technology and business. I built websites, launched startups, and published a book. Today I am currently pursuing my <strong>Bachelor's degree in BBIT</strong> (the degree is still in progress) while running ventures and creating content from Havelian.</p>
       <p>Beyond the work, I'm drawn to the deeper questions — I study <strong>Islamic philosophy</strong>, read about <strong>business and psychology</strong>, and find clarity across a <strong>chessboard</strong>. Every discipline informs the other.</p>
       <p>I believe the best builders are also thinkers.</p>
-      <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:28px;">Let's Connect</a>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;">
+        <a href="about.html" class="btn-primary" style="display:inline-block;">Read My Story</a>
+        <a href="contact.html" class="btn-outline" style="display:inline-block;">Let's Connect</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1096,11 +1113,11 @@
   <div class="section-label">02 — What I Do</div>
   <h2 class="section-title">Projects &amp; <em>Work</em></h2>
   <div class="cards-grid stagger">
-    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">01</div><span class="card-icon">💻</span><h3 class="card-title">Web Development</h3><p class="card-text">Building clean, functional websites with modern HTML &amp; CSS. Expanding into full-stack development with a passion for creating meaningful digital experiences.</p><a href="#web-dev-projects" class="card-link">View Projects →</a></div>
-    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">02</div><span class="card-icon">📸</span><h3 class="card-title">Photography</h3><p class="card-text">Capturing moments with an artist's eye. Portraits, landscapes, and street photography that tells stories beyond the frame — 15K+ followers on Instagram.</p><a href="photography.html" class="card-link">View Gallery →</a></div>
-    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">03</div><span class="card-icon">✍️</span><h3 class="card-title">Author &amp; Blogger</h3><p class="card-text">Published author of "Hope That Never Ends". Managing three content websites, writing to inspire and empower readers worldwide.</p><a href="https://www.amazon.in/Hope-That-Never-Ends-%D9%8A%D9%86%D9%82%D8%B7%D8%B9-ebook/dp/B0G4QDW69S" target="_blank" class="card-link">Buy My Book →</a></div>
+    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">01</div><span class="card-icon">💻</span><h3 class="card-title">Web Development</h3><p class="card-text">Building clean, functional websites with modern HTML &amp; CSS. Expanding into full-stack development with a passion for creating meaningful digital experiences.</p><a href="projects.html" class="card-link">View Projects →</a></div>
+    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">02</div><span class="card-icon">📸</span><h3 class="card-title">Photography</h3><p class="card-text">Capturing moments with an artist's eye. Portraits, landscapes, and street photography that tells stories beyond the frame — 15K+ followers on Instagram.</p><a href="photography.html" class="card-link">View Gallery →</a><a href="creative.html" class="card-link">Creative Work →</a></div>
+    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">03</div><span class="card-icon">✍️</span><h3 class="card-title">Author &amp; Blogger</h3><p class="card-text">Published author of "Hope That Never Ends". Managing three content websites, writing to inspire and empower readers worldwide.</p><a href="https://www.amazon.in/Hope-That-Never-Ends-%D9%8A%D9%86%D9%82%D8%B7%D8%B9-ebook/dp/B0G4QDW69S" target="_blank" class="card-link">Buy My Book →</a><a href="writing.html" class="card-link">Read More →</a></div>
     <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">04</div><span class="card-icon">🏠</span><h3 class="card-title">Airbnb Host</h3><p class="card-text">Managing multiple properties in Islamabad as an Airbnb Host and Co-Host. Handling guest communications, bookings, and full property management.</p></div>
-    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">05</div><span class="card-icon">🚀</span><h3 class="card-title">Entrepreneur</h3><p class="card-text">Founder of Havelian Kings and building two ambitious startups — Kor Da and Pactum — creating impact in Pakistan's startup ecosystem.</p><a href="#startups" class="card-link">View Startups →</a></div>
+    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">05</div><span class="card-icon">🚀</span><h3 class="card-title">Entrepreneur</h3><p class="card-text">Founder of Havelian Kings and building two ambitious startups — Kor Da and Pactum — creating impact in Pakistan's startup ecosystem.</p><a href="startups.html" class="card-link">View Startups →</a></div>
     <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">06</div><span class="card-icon">🛡️</span><h3 class="card-title">Former Security Officer</h3><p class="card-text">Served as Security Officer at Golden Eagle Security (GES) in Qatar — international experience, discipline, and leadership in high-stakes environments.</p></div>
   </div>
 
@@ -1116,7 +1133,8 @@
         <span class="project-tag">Pakistan</span>
       </div>
       <p class="project-desc">Pakistan's first Airbnb-style home rental platform built for local realities — PKR payments, EasyPaisa, and northern Pakistan tourism. Founded and built from scratch.</p>
-      <a href="https://korda-amber.vercel.app/" target="_blank" class="project-link">Visit →</a>
+      <a href="https://www.kordaa.com/" target="_blank" rel="noopener noreferrer" class="project-link">Visit →</a>
+      <a href="kor-da.html" class="project-link">Details →</a>
     </div>
 
     <div class="project-card">
@@ -1127,7 +1145,8 @@
         <span class="project-tag">Escrow</span>
       </div>
       <p class="project-desc">A trust-based escrow service protecting buyers and sellers in Pakistan's digital economy. Building transparent financial infrastructure where it's needed most.</p>
-      <a href="https://mak0315.github.io/pactum/" target="_blank" class="project-link">Visit →</a>
+      <a href="https://mak0315.github.io/pactum/" target="_blank" rel="noopener noreferrer" class="project-link">Visit →</a>
+      <a href="pactum.html" class="project-link">Details →</a>
     </div>
 
     <div class="project-card">
@@ -1138,7 +1157,8 @@
         <span class="project-tag">Client</span>
       </div>
       <p class="project-desc">A professional real estate web platform — property listings, clean UI, and a contact flow designed to convert visitors into clients for a local business.</p>
-      <a href="https://sa-real-estate.vercel.app/" target="_blank" class="project-link">Visit →</a>
+      <a href="https://sa-real-estate.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Visit →</a>
+      <a href="sa-real-estate.html" class="project-link">Details →</a>
     </div>
 
     <div class="project-card">
@@ -1149,7 +1169,8 @@
         <span class="project-tag">Services</span>
       </div>
       <p class="project-desc">Digital agency website built to establish a credible online presence — services showcase, portfolio, and client onboarding for a growing creative agency.</p>
-      <a href="https://lets-do-it-zeta.vercel.app/" target="_blank" class="project-link">Visit →</a>
+      <a href="https://lets-do-it-zeta.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Visit →</a>
+      <a href="lets-do-it-agency.html" class="project-link">Details →</a>
     </div>
 
     <div class="project-card">
@@ -1160,9 +1181,13 @@
         <span class="project-tag">Pro Bono</span>
       </div>
       <p class="project-desc">Official web presence for the Chess Federation of Pakistan — serving the country's chess community with tournament info and federation resources.</p>
-      <a href="https://mak0315.github.io/cfp-pakistan-chess-federation/" target="_blank" class="project-link">Visit →</a>
+      <a href="https://mak0315.github.io/cfp-pakistan-chess-federation/" target="_blank" rel="noopener noreferrer" class="project-link">Visit →</a>
+      <a href="chess-federation-of-pakistan.html" class="project-link">Details →</a>
     </div>
 
+  </div>
+  <div style="margin-top:38px;text-align:center;">
+    <a href="projects.html" class="btn-outline" style="display:inline-block;">View All Projects →</a>
   </div>
 </section>
 
@@ -1181,7 +1206,10 @@
     <div class="photo-cell"><img src="images/IMG4.jpg" alt="Photography"><div class="photo-overlay"><span>Islamic</span></div></div>
     <div class="photo-cell"><img src="images/IMG5.jpg" alt="Photography"><div class="photo-overlay"><span>Portrait</span></div></div>
   </div>
-  <div class="photo-view-all"><a href="photography.html" class="btn-outline" style="display:inline-block;">View Full Gallery →</a></div>
+  <div class="photo-view-all" style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+    <a href="photography.html" class="btn-outline" style="display:inline-block;">View Full Gallery →</a>
+    <a href="creative.html" class="btn-outline" style="display:inline-block;">Creative Work →</a>
+  </div>
 </section>
 
 <div class="divider"><div class="div-line"></div><div class="div-gem"></div><div class="div-line"></div></div>
@@ -1199,21 +1227,21 @@
     <div class="video-slot" style="position:relative;width:100%;height:420px;border-radius:12px;overflow:hidden;background:#000;">
       <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"><source src="./videos/video 1.mp4" type="video/mp4"></video>
       <div style="position:absolute;bottom:0;left:0;width:100%;padding:15px;background:linear-gradient(transparent,rgba(0,0,0,0.8));color:white;text-align:left;">
-        <div style="font-size:18px;font-weight:600;">before and after</div>
+        <div style="font-size:18px;font-weight:600;">Video 1</div>
         <div style="font-size:13px;opacity:0.8;">YouTube · Short</div>
       </div>
     </div>
     <div class="video-slot" style="position:relative;width:100%;height:420px;border-radius:12px;overflow:hidden;background:#000;">
       <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"><source src="./videos/video2.mp4" type="video/mp4"></video>
       <div style="position:absolute;bottom:0;left:0;width:100%;padding:15px;background:linear-gradient(transparent,rgba(0,0,0,0.8));color:white;text-align:left;">
-        <div style="font-size:18px;font-weight:600;">before and after</div>
+        <div style="font-size:18px;font-weight:600;">Video 2</div>
         <div style="font-size:13px;opacity:0.8;">YouTube · Short</div>
       </div>
     </div>
     <div class="video-slot" style="position:relative;width:100%;height:420px;border-radius:12px;overflow:hidden;background:#000;">
       <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"><source src="./videos/video3.mp4" type="video/mp4"></video>
       <div style="position:absolute;bottom:0;left:0;width:100%;padding:15px;background:linear-gradient(transparent,rgba(0,0,0,0.8));color:white;text-align:left;">
-        <div style="font-size:18px;font-weight:600;">before and after</div>
+        <div style="font-size:18px;font-weight:600;">Video 3</div>
         <div style="font-size:13px;opacity:0.8;">TikTok · Reel</div>
       </div>
     </div>
@@ -1245,7 +1273,8 @@
       <p class="author-desc">My debut motivational book <strong style="color:var(--ivory)">"Hope That Never Ends"</strong> is now available on Amazon. Written through real experiences, struggles, and victories — this book is for anyone who needs a reason to keep going when life gets heavy. Also available to read completely free online.</p>
       <div class="book-btns">
         <a href="https://www.amazon.in/Hope-That-Never-Ends-%D9%8A%D9%86%D9%82%D8%B7%D8%B9-ebook/dp/B0G4QDW69S" target="_blank" class="btn-primary">Buy on Amazon</a>
-        <a href="https://www.ourboox.com/bp/1701282/" target="_blank" class="btn-outline">Read for Free →</a>
+        <a href="https://www.ourboox.com/bp/1701282/" target="_blank" rel="noopener noreferrer" class="btn-outline">Read for Free →</a>
+        <a href="writing.html" class="btn-outline">Read More →</a>
       </div>
     </div>
   </div>
@@ -1272,9 +1301,10 @@
       <div class="startup-name">Pactum</div>
       <span class="startup-tag">Escrow · Fintech</span>
       <p class="startup-desc">A trust-based escrow service designed to secure transactions and protect both buyers and sellers. Building a transparent, reliable financial bridge for Pakistan's growing digital economy.</p>
-      <div style="display: flex; gap: 14px;">
-        <a href="https://mak0315.github.io/pactum/" target="_blank" class="card-link">Visit Website →</a>
-        <a href="https://www.linkedin.com/company/pactum-escrow?trk=public_profile_topcard-current-company" target="_blank" class="card-link">View on LinkedIn →</a>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="pactum.html" class="card-link">Startup Details →</a>
+        <a href="https://mak0315.github.io/pactum/" target="_blank" rel="noopener noreferrer" class="card-link">Visit Website →</a>
+        <a href="https://www.linkedin.com/company/pactum-escrow?trk=public_profile_topcard-current-company" target="_blank" rel="noopener noreferrer" class="card-link">View on LinkedIn →</a>
       </div>
     </div>
 
@@ -1289,12 +1319,16 @@
       <div class="startup-name">Kor Da</div>
       <span class="startup-tag">Property · Pakistan</span>
       <p class="startup-desc">A Pakistan-focused property and home solutions startup. Built from real experience managing Airbnb properties in Islamabad and a deep understanding of Pakistan's real estate landscape.</p>
-      <div style="display: flex; gap: 14px;">
-        <a href="https://korda-amber.vercel.app/" target="_blank" class="card-link">Visit Website →</a>
-        <a href="https://www.linkedin.com/company/kor-da/" target="_blank" class="card-link">View on LinkedIn →</a>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="kor-da.html" class="card-link">Startup Details →</a>
+        <a href="https://www.kordaa.com/" target="_blank" rel="noopener noreferrer" class="card-link">Visit Website →</a>
+        <a href="https://www.linkedin.com/company/kor-da/" target="_blank" rel="noopener noreferrer" class="card-link">View on LinkedIn →</a>
       </div>
     </div>
 
+  </div>
+  <div style="margin-top:38px;text-align:center;">
+    <a href="startups.html" class="btn-outline" style="display:inline-block;">View Ventures →</a>
   </div>
 </section>
 
@@ -1308,7 +1342,7 @@
   <h2 class="section-title">A Life of <em>Many Chapters</em></h2>
   <table class="exp-table">
     <tr><th>Role</th><th>Organization</th><th>Location</th><th>Status</th></tr>
-    <tr><td>BBIT Student</td><td>University</td><td>Pakistan</td><td><span class="tag active">Ongoing</span></td></tr>
+    <tr><td>BBIT Student (degree in progress)</td><td>University</td><td>Pakistan</td><td><span class="tag active">Ongoing</span></td></tr>
     <tr><td>Former Security Officer</td><td>Golden Eagle Security (GES)</td><td>Doha, Qatar</td><td><span class="tag old">Former</span></td></tr>
     <tr><td>Club Cricket Player &amp; Founder</td><td>Havelian Kings</td><td>Pakistan</td><td><span class="tag old">Former</span></td></tr>
     <tr><td>Airbnb Host &amp; Co-Host</td><td>Self-Managed Properties</td><td>Islamabad, PK</td><td><span class="tag active">Ongoing</span></td></tr>
@@ -1317,13 +1351,16 @@
     <tr><td>Published Author</td><td>Self-Published · Amazon</td><td>Global</td><td><span class="tag active">Published</span></td></tr>
   </table>
   <div class="exp-cards">
-    <div class="exp-card"><div class="exp-card__role">BBIT Student</div><div class="exp-card__org">University</div><div class="exp-card__foot"><span class="exp-card__loc">Pakistan</span><span class="tag active">Ongoing</span></div></div>
+    <div class="exp-card"><div class="exp-card__role">BBIT Student (degree in progress)</div><div class="exp-card__org">University</div><div class="exp-card__foot"><span class="exp-card__loc">Pakistan</span><span class="tag active">Ongoing</span></div></div>
     <div class="exp-card"><div class="exp-card__role">Former Security Officer</div><div class="exp-card__org">Golden Eagle Security (GES)</div><div class="exp-card__foot"><span class="exp-card__loc">Doha, Qatar</span><span class="tag old">Former</span></div></div>
     <div class="exp-card"><div class="exp-card__role">Club Cricket Player &amp; Founder</div><div class="exp-card__org">Havelian Kings</div><div class="exp-card__foot"><span class="exp-card__loc">Pakistan</span><span class="tag old">Former</span></div></div>
     <div class="exp-card"><div class="exp-card__role">Airbnb Host &amp; Co-Host</div><div class="exp-card__org">Self-Managed Properties</div><div class="exp-card__foot"><span class="exp-card__loc">Islamabad, PK</span><span class="tag active">Ongoing</span></div></div>
     <div class="exp-card"><div class="exp-card__role">Founder</div><div class="exp-card__org">Pactum Escrow</div><div class="exp-card__foot"><span class="exp-card__loc">Pakistan</span><span class="tag active">Active</span></div></div>
     <div class="exp-card"><div class="exp-card__role">Founder</div><div class="exp-card__org">Kor Da</div><div class="exp-card__foot"><span class="exp-card__loc">Pakistan</span><span class="tag active">Active</span></div></div>
     <div class="exp-card"><div class="exp-card__role">Published Author</div><div class="exp-card__org">Self-Published · Amazon</div><div class="exp-card__foot"><span class="exp-card__loc">Global</span><span class="tag active">Published</span></div></div>
+  </div>
+  <div style="margin-top:38px;text-align:center;">
+    <a href="experience.html" class="btn-outline" style="display:inline-block;">My Experience →</a>
   </div>
 </section>
 
@@ -1388,6 +1425,9 @@
     </div>
 
   </div>
+  <div style="margin-top:38px;text-align:center;">
+    <a href="interests.html" class="btn-outline" style="display:inline-block;">View Interests →</a>
+  </div>
 </section>
 
 <div class="divider"><div class="div-line"></div><div class="div-gem"></div><div class="div-line"></div></div>
@@ -1408,6 +1448,7 @@
         <a href="https://pk.linkedin.com/in/muhammad-ayan-khan-72803a338?trk=people-guest_people_search-card" target="_blank" class="social-link"><span class="soc-icon">💼</span>LinkedIn<span class="soc-handle">Muhammad Ayan Khan</span></a>
         <a href="https://www.facebook.com/MAK111111/" target="_blank" class="social-link"><span class="soc-icon">📘</span>Facebook<span class="soc-handle">MAK111111</span></a>
         <a href="https://www.tiktok.com/@stupid_soul1?_r=1&_t=ZS-94FNPB0YgGw" target="_blank" class="social-link"><span class="soc-icon">🎵</span>TikTok<span class="soc-handle">@stupid_soul1</span></a>
+        <a href="contact.html" class="btn-outline" style="display:inline-block;margin-top:24px;">Get In Touch →</a>
       </div>
     </div>
     <form class="contact-form reveal-r" id="contactForm" novalidate>
@@ -1427,10 +1468,18 @@
   <div class="f-logo">M · A · K</div>
   <div class="f-copy">© 2026 Muhammad Ayan Khan — All Rights Reserved</div>
   <div class="f-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="startups.html">Startups</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="creative.html">Creative</a>
+    <a href="writing.html">Writing</a>
+    <a href="interests.html">Interests</a>
+    <a href="contact.html">Contact</a>
     <a href="photography.html">Photography</a>
-    <a href="https://www.facebook.com/MAK111111/" target="_blank">Facebook</a>
-    <a href="https://www.tiktok.com/@stupid_soul1" target="_blank">TikTok</a>
-    <a href="#contact">Contact</a>
+    <a href="https://www.facebook.com/MAK111111/" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href="https://www.tiktok.com/@stupid_soul1" target="_blank" rel="noopener noreferrer">TikTok</a>
   </div>
 </footer>
 

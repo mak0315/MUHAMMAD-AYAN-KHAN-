@@ -3,27 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creative | Muhammad Ayan Khan</title>
-  <meta name="description" content="Photography, video and creative work by Muhammad Ayan Khan — visual projects and stories from Pakistan.">
-  <!-- PLACEHOLDER (Phase 2): agree and add canonical URL before publishing. -->
+  <title>Creative Work | Muhammad Ayan Khan</title>
+  <meta name="description" content="Explore photography, video and other creative work by Muhammad Ayan Khan, including his gallery and video channels.">
+  <link rel="canonical" href="https://muhammad-ayan-khan-opal.vercel.app/creative.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="page-styles.css">
 </head>
 <body>
-<!-- PHASE 1 SCAFFOLD ONLY — index.html, navigation and all existing files are untouched. -->
-<header class="page-header">
-  <span class="brand">M · A · K</span>
-  <!-- PLACEHOLDER (Phase 2): decide shared navigation here. -->
-  <span class="nav-placeholder">Navigation — Phase 2</span>
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="ring"></div>
+
+<header class="page-header" id="nav">
+  <a href="index.html" class="nav-logo">M · A · K</a>
+  <ul class="site-nav" aria-label="Main navigation">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="startups.html">Startups</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="creative.html" aria-current="page">Creative</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="interests.html">Interests</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </header>
 
 <main>
   <section class="page-hero">
     <p class="page-kicker">Muhammad Ayan Khan / Creative</p>
     <h1 class="page-title">The <em>Creative</em> Side</h1>
-    <span class="placeholder">[PLACEHOLDER — One-to-two sentence introduction to the creative work.]</span>
+    <p class="page-intro">Photography and video — capturing moments with an artist's eye and telling stories beyond the frame.</p>
   </section>
 
   <div class="page-main">
@@ -31,36 +42,63 @@
     <section class="page-section" id="photography">
       <span class="section-number">01 — Photography</span>
       <h2 class="section-heading"><em>Photography</em></h2>
-      <span class="placeholder">[PLACEHOLDER — Selected photographs with titles, locations and categories.]</span>
-      <div class="link-row">
-        <a href="photography.html">Existing photography gallery ↗</a>
+      <p class="lead">I capture portraits, landscapes and street photography. A selection of work is shown below; the full gallery lives on its own page.</p>
+      <div class="photo-grid">
+        <img src="images/IMG8 POT3.jpg" alt="Featured photographic shot">
+        <img src="images/IMG6 POT1.jpg" alt="Portrait photograph">
+        <img src="images/ph1.jpg" alt="Landscape photograph">
+        <img src="images/IMG4.jpg" alt="Islamic-themed photograph">
+        <img src="images/IMG5.jpg" alt="Portrait photograph">
       </div>
-      <p class="section-note">The linked gallery is an existing page and is not modified in this phase.</p>
+      <div class="link-row">
+        <a href="photography.html">View full gallery →</a>
+        <a href="https://www.instagram.com/stupid._soul/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      </div>
     </section>
 
     <section class="page-section" id="video">
       <span class="section-number">02 — Video</span>
       <h2 class="section-heading"><em>Video</em> &amp; Reels</h2>
-      <span class="placeholder">[PLACEHOLDER — Selected videos with title, platform and year.]</span>
+      <p>The clips below are the videos already used on the homepage. Their original titles were not supplied, so they are labelled Video 1–3.</p>
+      <div class="video-grid">
+        <figure>
+          <video controls preload="metadata" playsinline><source src="videos/video 1.mp4" type="video/mp4"></video>
+          <figcaption>Video 1 · YouTube Short</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" playsinline><source src="videos/video2.mp4" type="video/mp4"></video>
+          <figcaption>Video 2 · YouTube Short</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" playsinline><source src="videos/video3.mp4" type="video/mp4"></video>
+          <figcaption>Video 3 · TikTok Reel</figcaption>
+        </figure>
+      </div>
       <div class="link-row">
         <a href="https://www.youtube.com/@MuhammadAyanKhan" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
         <a href="https://www.tiktok.com/@stupid_soul1" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
       </div>
+      <span class="placeholder">[PLACEHOLDER — Add verified titles and publication dates for each clip if available.]</span>
     </section>
 
     <section class="page-section" id="creative-work">
       <span class="section-number">03 — Creative Work</span>
       <h2 class="section-heading">Other <em>Creative Work</em></h2>
-      <span class="placeholder">[PLACEHOLDER — Additional projects: editing, design, visual experiments. Add only confirmed work.]</span>
+      <p>Beyond photography and video, my creative output includes writing — from the book “Hope That Never Ends” to content about growth and ideas.</p>
+      <div class="link-row"><a href="writing.html">See the writing →</a></div>
+      <span class="placeholder">[PLACEHOLDER — Add any other confirmed creative projects, with links or images.]</span>
     </section>
 
   </div>
 </main>
 
 <footer class="page-footer">
-  <span class="brand">M · A · K</span>
+  <span class="nav-logo">M · A · K</span>
   <p>© 2026 Muhammad Ayan Khan — All Rights Reserved</p>
-  <!-- PLACEHOLDER (Phase 2): footer links to be agreed. -->
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="startups.html">Startups</a><a href="projects.html">Projects</a><a href="experience.html">Experience</a><a href="creative.html">Creative</a><a href="writing.html">Writing</a><a href="interests.html">Interests</a><a href="contact.html">Contact</a><a href="photography.html">Photography</a>
+  </div>
 </footer>
+<script src="main.js"></script>
 </body>
 </html>

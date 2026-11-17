@@ -4,26 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Startups | Muhammad Ayan Khan</title>
-  <meta name="description" content="An overview of the startups founded by Muhammad Ayan Khan, including Kor Da and Pactum, and the thinking behind them.">
-  <!-- PLACEHOLDER (Phase 2): agree and add canonical URL before publishing. -->
+  <meta name="description" content="Explore the startups founded by Muhammad Ayan Khan, including Kor Da and Pactum — their goals, challenges and future plans.">
+  <link rel="canonical" href="https://muhammad-ayan-khan-opal.vercel.app/startups.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="page-styles.css">
 </head>
 <body>
-<!-- PHASE 1 SCAFFOLD ONLY — index.html, navigation and all existing files are untouched. -->
-<header class="page-header">
-  <span class="brand">M · A · K</span>
-  <!-- PLACEHOLDER (Phase 2): decide shared navigation here. -->
-  <span class="nav-placeholder">Navigation — Phase 2</span>
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="ring"></div>
+
+<header class="page-header" id="nav">
+  <a href="index.html" class="nav-logo">M · A · K</a>
+  <ul class="site-nav" aria-label="Main navigation">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="startups.html" aria-current="page">Startups</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="creative.html">Creative</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="interests.html">Interests</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </header>
 
 <main>
   <section class="page-hero">
     <p class="page-kicker">Muhammad Ayan Khan / Startups</p>
     <h1 class="page-title">The <em>Startups</em></h1>
-    <span class="placeholder">[PLACEHOLDER — One-to-two sentence page introduction about building ventures in Pakistan.]</span>
+    <p class="page-intro">Building practical businesses for Pakistan — from property and home solutions to trust in digital payments.</p>
   </section>
 
   <div class="page-main">
@@ -31,7 +42,8 @@
     <section class="page-section" id="overview">
       <span class="section-number">01 — Overview</span>
       <h2 class="section-heading">The <em>Overview</em></h2>
-      <span class="placeholder">[PLACEHOLDER — What this hub page covers and how the ventures relate to each other.]</span>
+      <p class="lead">I have built two startups: <a href="kor-da.html">Kor Da</a> and <a href="pactum.html">Pactum</a>. Both focus on local needs — managing properties in Islamabad, and the need for trust between buyers and sellers in Pakistan's digital economy.</p>
+      <p>Each venture has its own page with a closer look at the problem, the approach, my role and what comes next.</p>
     </section>
 
     <section class="page-section" id="ventures">
@@ -39,56 +51,77 @@
       <h2 class="section-heading">Current <em>Ventures</em></h2>
       <div class="card-grid">
         <div class="card">
+          <img src="images/kor da.png" alt="Kor Da logo" style="display:block;max-height:60px;object-fit:contain;margin-bottom:16px;">
           <h3>Kor Da</h3>
-          <span class="placeholder">[PLACEHOLDER — One-line summary of Kor Da.]</span>
-          <div class="link-row"><a href="kor-da.html">Read more →</a></div>
+          <p><span class="tag">Property</span><span class="tag">Pakistan</span></p>
+          <p>A Pakistan-focused property and home solutions startup, built from real experience managing Airbnb properties in Islamabad.</p>
+          <div class="link-row"><a href="kor-da.html">Read the full story →</a></div>
         </div>
         <div class="card">
+          <img src="images/pacttum.png" alt="Pactum logo" style="display:block;max-height:60px;object-fit:contain;margin-bottom:16px;">
           <h3>Pactum</h3>
-          <span class="placeholder">[PLACEHOLDER — One-line summary of Pactum.]</span>
-          <div class="link-row"><a href="pactum.html">Read more →</a></div>
+          <p><span class="tag">Escrow</span><span class="tag">Fintech</span></p>
+          <p>A trust-based escrow service designed to secure transactions and protect both buyers and sellers.</p>
+          <div class="link-row"><a href="pactum.html">Read the full story →</a></div>
         </div>
       </div>
-      <p class="section-note">Additional ventures can be added as new cards without changing the page structure.</p>
+      <p class="section-note">I am also the founder of Havelian Kings, a club cricket initiative in Pakistan — see <a href="experience.html">Experience</a>.</p>
     </section>
 
     <section class="page-section" id="my-role">
       <span class="section-number">03 — My Role</span>
       <h2 class="section-heading">My <em>Role</em></h2>
-      <span class="placeholder">[PLACEHOLDER — What I personally do in each venture. Use precise role titles only.]</span>
+      <p>I am listed as the founder of both Kor Da and Pactum. In practical terms my work has covered identifying the problem, shaping the product idea, building the web presence and presenting the ventures publicly.</p>
+      <span class="placeholder">[PLACEHOLDER — Add your exact official titles and day-to-day responsibilities for each venture.]</span>
     </section>
 
     <section class="page-section" id="business-models">
       <span class="section-number">04 — Business Models</span>
       <h2 class="section-heading">How They <em>Work</em></h2>
-      <span class="placeholder">[PLACEHOLDER — Business model for each venture, described in plain language.]</span>
+      <div class="entry">
+        <div class="meta">Kor Da</div>
+        <h3>Property and home solutions</h3>
+        <p>The existing portfolio describes an Airbnb-style home rental approach built for local realities — PKR payments, EasyPaisa and northern Pakistan tourism.</p>
+      </div>
+      <div class="entry">
+        <div class="meta">Pactum</div>
+        <h3>Trust-based escrow</h3>
+        <p>Pactum is described as a trust-based escrow service designed to protect buyers and sellers, with the aim of making digital transactions more transparent.</p>
+      </div>
+      <span class="placeholder">[PLACEHOLDER — Confirm the current business model and revenue approach for each venture before publishing.]</span>
     </section>
 
     <section class="page-section" id="challenges">
       <span class="section-number">05 — Challenges</span>
       <h2 class="section-heading">The <em>Challenges</em></h2>
-      <span class="placeholder">[PLACEHOLDER — Problems faced and what was learned. No figures unless verified.]</span>
+      <p>Building in Pakistan means working with local payment habits, trust gaps and market realities — the same conditions that shaped these two ideas.</p>
+      <span class="placeholder">[PLACEHOLDER — Describe specific challenges and lessons learned. No figures have been supplied.]</span>
     </section>
 
     <section class="page-section" id="achievements">
       <span class="section-number">06 — Achievements</span>
       <h2 class="section-heading">Milestones &amp; <em>Achievements</em></h2>
-      <span class="placeholder">[PLACEHOLDER — Verified milestones only. Add dates and sources where possible.]</span>
+      <p>Both ventures have live public websites and company LinkedIn pages, linked from the dedicated pages.</p>
+      <span class="placeholder">[PLACEHOLDER — List only verified milestones with dates or evidence. Do not add traction, funding or customer numbers unless confirmed.]</span>
     </section>
 
     <section class="page-section" id="future-plans">
       <span class="section-number">07 — Future Plans</span>
       <h2 class="section-heading">What's <em>Next</em></h2>
-      <span class="placeholder">[PLACEHOLDER — Planned direction for each venture. Frame as plans, not results.]</span>
+      <p>The portfolio presents both startups as active while I continue my BBIT studies. Specific future plans have not been published yet.</p>
+      <span class="placeholder">[PLACEHOLDER — Add specific, confirmed plans for each venture.]</span>
     </section>
 
   </div>
 </main>
 
 <footer class="page-footer">
-  <span class="brand">M · A · K</span>
+  <span class="nav-logo">M · A · K</span>
   <p>© 2026 Muhammad Ayan Khan — All Rights Reserved</p>
-  <!-- PLACEHOLDER (Phase 2): footer links to be agreed. -->
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="startups.html">Startups</a><a href="projects.html">Projects</a><a href="experience.html">Experience</a><a href="creative.html">Creative</a><a href="writing.html">Writing</a><a href="interests.html">Interests</a><a href="contact.html">Contact</a><a href="photography.html">Photography</a>
+  </div>
 </footer>
+<script src="main.js"></script>
 </body>
 </html>
