@@ -188,6 +188,62 @@ img, video { max-width: 100%; }
   padding: 16px 18px; margin: 12px 0; font-size: .86rem;
 }
 
+/* ---------- FAQ Section ---------- */
+.faq-item {
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  border-radius: 4px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.faq-item:hover {
+  border-color: var(--gold);
+}
+.faq-item summary {
+  cursor: pointer;
+  padding: 20px 24px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--ivory);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.2rem;
+  color: var(--gold);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+.faq-item summary:hover {
+  color: var(--gold);
+}
+.faq-answer {
+  padding: 0 24px 20px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--muted);
+  animation: fadeUp 0.3s ease;
+}
+.faq-item[open] summary {
+  color: var(--gold);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+
 /* ---------- Footer ---------- */
 .page-footer {
   padding: 42px 6%; border-top: 1px solid var(--border);

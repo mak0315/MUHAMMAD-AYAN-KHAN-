@@ -1,0 +1,151 @@
+# robots.txt for Muhammad Ayan Khan Portfolio
+# https://muhammad-ayan-khan-opal.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://muhammad-ayan-khan-opal.vercel.app/sitemap.xml
+
+# Host directive (for Yandex and others)
+Host: https://muhammad-ayan-khan-opal.vercel.app
+
+# Crawl-delay for polite crawling (seconds)
+Crawl-delay: 10
+
+# ============================================
+# SEARCH ENGINE CRAWLERS (Indexing)
+# ============================================
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Googlebot-Video
+Allow: /videos/
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+# Google AI / Generative Search
+User-agent: Google-Extended
+# Note: This controls whether content can be used for training Google's AI models
+# Allowing does NOT guarantee appearance in AI Overviews
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+User-agent: MSNBot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+User-agent: YandexImages
+Allow: /images/
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+# ============================================
+# AI SEARCH CRAWLERS (Retrieval for AI Answers)
+# ============================================
+
+# OpenAI / ChatGPT Search
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# Meta
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# ============================================
+# MODEL TRAINING CRAWLERS (Opt-in for training)
+# ============================================
+# These are SEPARATE from search indexing crawlers.
+# Allowing these permits use of content for TRAINING models.
+# This is NOT required for search visibility or AI citations.
+# Uncomment only if you explicitly want to allow training use.
+
+# User-agent: GPTBot
+# Disallow: /
+
+# User-agent: CCBot
+# Disallow: /
+
+# User-agent: anthropic-ai
+# Disallow: /
+
+# User-agent: Claude-Web
+# Disallow: /
+
+# User-agent: Bytespider
+# Disallow: /
+
+# User-agent: Diffbot
+# Disallow: /
+
+# ============================================
+# RESOURCE ACCESS (Do not block)
+# ============================================
+# CSS, JS, images, fonts, and other resources needed for rendering
+# are allowed by default with "Allow: /" above.
+# Do NOT add Disallow rules for /css/, /js/, /images/, /fonts/, /videos/
+# as this breaks rendering for search engines and AI crawlers.
+
+# ============================================
+# ADMIN / PRIVATE PATHS (if any)
+# ============================================
+# Disallow: /admin/
+# Disallow: /api/
+# Disallow: /private/
+# Disallow: /*.json$
+# Disallow: /*.xml$ (except sitemap.xml which is explicitly allowed)
+
+# ============================================
+# NOTES
+# ============================================
+# - This robots.txt allows all legitimate search and AI search crawlers
+# - Model training crawlers are blocked by default (opt-in only)
+# - No CSS, JS, image, or font resources are blocked
+# - robots.txt does NOT guarantee indexing or AI citations
+# - For content removal, use noindex meta tags or Google Search Console
+# - llms.txt is an experimental discovery aid, not a ranking factor
