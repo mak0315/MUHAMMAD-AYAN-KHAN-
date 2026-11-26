@@ -201,9 +201,10 @@
     }
     .mobile-close {
       position: absolute; top: 22px; right: 22px; background: none; border: none;
-      color: var(--muted); font-size: 1.6rem; cursor: pointer; padding: 8px;
+      color: var(--muted); cursor: pointer; padding: 8px;
       line-height: 1; transition: color 0.3s;
     }
+    .mobile-close .icon { width: 22px; height: 22px; }
     .mobile-close:hover { color: var(--gold); }
 
     /* ═══════════════════════════════════════════
@@ -1060,7 +1061,7 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="menuClose" aria-label="Close menu">&#x2715;</button>
+  <button class="mobile-close" id="menuClose" aria-label="Close menu"><svg class="icon"><use href="icons.svg#icon-x"/></svg></button>
   <a href="/">Home</a>
   <a href="about.html">About</a>
   <a href="startups.html">Startups</a>
@@ -1174,12 +1175,12 @@
   <div class="section-label">02 — What I Do</div>
   <h2 class="section-title">Projects &amp; <em>Work</em></h2>
   <div class="cards-grid stagger">
-    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">01</div><span class="card-icon">💻</span><h3 class="card-title">Web Development</h3><p class="card-text">Self-taught full-stack developer building websites, APIs, and databases with clean HTML &amp; CSS.</p><a href="projects.html" class="card-link">View Projects →</a></div>
-    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">02</div><span class="card-icon">📸</span><h3 class="card-title">Photography</h3><p class="card-text">Capturing moments with an artist's eye. Portraits, landscapes, and street photography that tells stories beyond the frame.</p><a href="photography.html" class="card-link">View Gallery →</a><a href="creative.html" class="card-link">Creative Work →</a></div>
-    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">03</div><span class="card-icon">✍️</span><h3 class="card-title">Author &amp; Blogger</h3><p class="card-text">Published author of "Hope That Never Ends". Managing three content websites, writing to inspire and empower readers worldwide.</p><a href="https://www.amazon.in/Hope-That-Never-Ends-%D9%8A%D9%86%D9%82%D8%B7%D8%B9-ebook/dp/B0G4QDW69S" target="_blank" class="card-link">Buy My Book →</a><a href="writing.html" class="card-link">Read More →</a></div>
-    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">04</div><span class="card-icon">🏠</span><h3 class="card-title">Airbnb Host</h3><p class="card-text">Managing multiple properties in Islamabad as an Airbnb Host and Co-Host. Handling guest communications, bookings, and full property management.</p></div>
-    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">05</div><span class="card-icon">🚀</span><h3 class="card-title">Entrepreneur</h3><p class="card-text">Founder of Havelian Kings and building two ambitious startups — Kor Da and Pactum — creating impact in Pakistan's startup ecosystem.</p><a href="startups.html" class="card-link">View Startups →</a></div>
-    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">06</div><span class="card-icon">🛡️</span><h3 class="card-title">Former Security Officer</h3><p class="card-text">Served as Security Officer at Golden Eagle Security (GES) in Qatar — international experience, discipline, and leadership in high-stakes environments.</p></div>
+    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">01</div><span class="card-icon"><svg class="icon"><use href="icons.svg#icon-code"/></svg></span><h3 class="card-title">Web Development</h3><p class="card-text">Self-taught full-stack developer building websites, APIs, and databases with clean HTML &amp; CSS.</p><a href="projects.html" class="card-link">View Projects →</a></div>
+    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">02</div><span class="card-icon"><svg class="icon"><use href="icons.svg#icon-camera"/></svg></span><h3 class="card-title">Photography</h3><p class="card-text">Capturing moments with an artist's eye. Portraits, landscapes, and street photography that tells stories beyond the frame.</p><a href="photography.html" class="card-link">View Gallery →</a><a href="creative.html" class="card-link">Creative Work →</a></div>
+    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">03</div><span class="card-icon"><svg class="icon"><use href="icons.svg#icon-pen"/></svg></span><h3 class="card-title">Author &amp; Blogger</h3><p class="card-text">Published author of "Hope That Never Ends". Managing three content websites, writing to inspire and empower readers worldwide.</p><a href="https://www.amazon.in/Hope-That-Never-Ends-%D9%8A%D9%86%D9%82%D8%B7%D8%B9-ebook/dp/B0G4QDW69S" target="_blank" class="card-link">Buy My Book →</a><a href="writing.html" class="card-link">Read More →</a></div>
+    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">04</div><span class="card-icon"><svg class="icon"><use href="icons.svg#icon-home"/></svg></span><h3 class="card-title">Airbnb Host</h3><p class="card-text">Managing multiple properties in Islamabad as an Airbnb Host and Co-Host. Handling guest communications, bookings, and full property management.</p></div>
+    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">05</div><span class="card-icon"><svg class="icon"><use href="icons.svg#icon-rocket"/></svg></span><h3 class="card-title">Entrepreneur</h3><p class="card-text">Founder of Havelian Kings and building two ambitious startups — Kor Da and Pactum — creating impact in Pakistan's startup ecosystem.</p><a href="startups.html" class="card-link">View Startups →</a></div>
+    <div class="card"><div class="card-shine"></div><div class="card-topline"></div><div class="card-num">06</div><span class="card-icon"><svg class="icon"><use href="icons.svg#icon-shield"/></svg></span><h3 class="card-title">Former Security Officer</h3><p class="card-text">Served as Security Officer at Golden Eagle Security (GES) in Qatar — international experience, discipline, and leadership in high-stakes environments.</p></div>
   </div>
 
   <!-- WEB DEVELOPMENT PROJECTS -->
@@ -1490,26 +1491,26 @@
   <div class="interests-grid stagger">
 
     <div class="interest-card">
-      <span class="interest-icon">♟</span>
+      <span class="interest-icon"><svg class="icon"><use href="icons.svg#icon-chess"/></svg></span>
       <h3 class="interest-title">Chess</h3>
       <p class="interest-text">"Strategy, patience, and seeing 5 moves ahead. Chess sharpened how I think about business decisions and startup strategy."</p>
       <a href="https://mak0315.github.io/cfp-pakistan-chess-federation/" target="_blank" class="interest-link">I also built the CFP website →</a>
     </div>
 
     <div class="interest-card">
-      <span class="interest-icon">📖</span>
+      <span class="interest-icon"><svg class="icon"><use href="icons.svg#icon-book"/></svg></span>
       <h3 class="interest-title">Philosophy</h3>
       <p class="interest-text">"I read across Stoic thought, psychology, and Islamic scholarship — ideas that outlive their era and sharpen how I see the world."</p>
     </div>
 
     <div class="interest-card">
-      <span class="interest-icon">🕌</span>
+      <span class="interest-icon"><svg class="icon"><use href="icons.svg#icon-moon"/></svg></span>
       <h3 class="interest-title">Faith &amp; Purpose</h3>
       <p class="interest-text">"Islam grounds my purpose and ethics. I build businesses with the intention to create genuine value and serve — not just profit."</p>
     </div>
 
     <div class="interest-card">
-      <span class="interest-icon">📈</span>
+      <span class="interest-icon"><svg class="icon"><use href="icons.svg#icon-trending-up"/></svg></span>
       <h3 class="interest-title">Business</h3>
       <p class="interest-text">"Business is my laboratory. Every startup is an experiment in human behavior, value creation, and building something that lasts."</p>
     </div>
@@ -1534,21 +1535,21 @@
       <p>Whether you have a project in mind, want to collaborate, or just want to say hello — I'd love to hear from you.</p>
       <div class="contact-quick" style="margin-top:24px;">
         <div class="contact-item" style="display:flex;align-items:flex-start;gap:12px;margin-bottom:16px;">
-          <span style="color:var(--gold);font-size:1.1rem;">✉</span>
+          <span><svg class="icon"><use href="icons.svg#icon-mail"/></svg></span>
           <div><div style="font-family:var(--font-display);font-size:0.9rem;color:var(--ivory);">Email</div><a href="mailto:ah5909931@gmail.com" style="color:var(--muted);text-decoration:none;font-size:0.82rem;">ah5909931@gmail.com</a></div>
         </div>
         <div class="contact-item" style="display:flex;align-items:flex-start;gap:12px;margin-bottom:16px;">
-          <span style="color:var(--gold);font-size:1.1rem;">💬</span>
+          <span><svg class="icon"><use href="icons.svg#icon-message"/></svg></span>
           <div><div style="font-family:var(--font-display);font-size:0.9rem;color:var(--ivory);">WhatsApp</div><a href="https://wa.me/923000000000" target="_blank" rel="noopener noreferrer" style="color:var(--muted);text-decoration:none;font-size:0.82rem;">Message on WhatsApp</a></div>
         </div>
       </div>
       <div class="social-links">
-        <a href="https://www.instagram.com/stupid._soul/" target="_blank" class="social-link"><span class="soc-icon">📷</span>Instagram<span class="soc-handle">@stupid._soul</span></a>
-        <a href="https://www.youtube.com/@MuhammadAyanKhan" target="_blank" class="social-link"><span class="soc-icon">▶️</span>YouTube<span class="soc-handle">@MuhammadAyanKhan</span></a>
-        <a href="https://www.linkedin.com/in/muhammad-ayan-khan-72803a338" target="_blank" class="social-link"><span class="soc-icon">💼</span>LinkedIn<span class="soc-handle">Muhammad Ayan Khan</span></a>
-        <a href="https://www.facebook.com/MAK111111/" target="_blank" class="social-link"><span class="soc-icon">📘</span>Facebook<span class="soc-handle">MAK111111</span></a>
-        <a href="https://www.tiktok.com/@stupid_soul1" target="_blank" class="social-link"><span class="soc-icon">🎵</span>TikTok<span class="soc-handle">@stupid_soul1</span></a>
-        <a href="https://github.com/mak0315" target="_blank" class="social-link"><span class="soc-icon">🐙</span>GitHub<span class="soc-handle">mak0315</span></a>
+        <a href="https://www.instagram.com/stupid._soul/" target="_blank" class="social-link"><span class="soc-icon"><svg class="icon"><use href="icons.svg#icon-instagram"/></svg></span>Instagram<span class="soc-handle">@stupid._soul</span></a>
+        <a href="https://www.youtube.com/@MuhammadAyanKhan" target="_blank" class="social-link"><span class="soc-icon"><svg class="icon"><use href="icons.svg#icon-youtube"/></svg></span>YouTube<span class="soc-handle">@MuhammadAyanKhan</span></a>
+        <a href="https://www.linkedin.com/in/muhammad-ayan-khan-72803a338" target="_blank" class="social-link"><span class="soc-icon"><svg class="icon"><use href="icons.svg#icon-linkedin"/></svg></span>LinkedIn<span class="soc-handle">Muhammad Ayan Khan</span></a>
+        <a href="https://www.facebook.com/MAK111111/" target="_blank" class="social-link"><span class="soc-icon"><svg class="icon"><use href="icons.svg#icon-facebook"/></svg></span>Facebook<span class="soc-handle">MAK111111</span></a>
+        <a href="https://www.tiktok.com/@stupid_soul1" target="_blank" class="social-link"><span class="soc-icon"><svg class="icon"><use href="icons.svg#icon-music"/></svg></span>TikTok<span class="soc-handle">@stupid_soul1</span></a>
+        <a href="https://github.com/mak0315" target="_blank" class="social-link"><span class="soc-icon"><svg class="icon"><use href="icons.svg#icon-github"/></svg></span>GitHub<span class="soc-handle">mak0315</span></a>
         <a href="contact.html" class="btn-outline" style="display:inline-block;margin-top:24px;">Get In Touch →</a>
       </div>
     </div>

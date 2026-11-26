@@ -230,3 +230,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   }
 }
 
+/* ---------- Icon system ---------- */
+.icon { width: 1em; height: 1em; display: inline-block; vertical-align: middle; flex-shrink: 0; }
+.card-icon .icon { width: 32px; height: 32px; color: var(--gold); }
+.interest-icon .icon { width: 40px; height: 40px; color: var(--gold); }
+.soc-icon .icon { width: 20px; height: 20px; color: var(--muted); transition: color .3s; }
+.social-link:hover .soc-icon .icon { color: var(--gold); }
+.contact-item > span .icon { width: 20px; height: 20px; color: var(--gold); }
+.lb-close .icon { width: 20px; height: 20px; }
+.lb-btn .icon { width: 14px; height: 14px; vertical-align: -2px; margin: 0 2px; }
+

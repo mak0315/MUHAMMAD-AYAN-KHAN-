@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+  <!-- Card: Web Development -->
+  <symbol id="icon-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="8 8 4 12 8 16"/>
+    <polyline points="16 8 20 12 16 16"/>
+    <line x1="14" y1="4" x2="10" y2="20"/>
+  </symbol>
+
+  <!-- Card: Photography -->
+  <symbol id="icon-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+    <circle cx="12" cy="13" r="3.5"/>
+  </symbol>
+
+  <!-- Card: Author & Blogger -->
+  <symbol id="icon-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+    <path d="M2 2l7.586 7.586"/>
+    <circle cx="11" cy="11" r="2"/>
+  </symbol>
+
+  <!-- Card: Airbnb Host -->
+  <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11l8-7 8 7"/>
+    <path d="M6 9.5V20a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9.5"/>
+    <polyline points="9 21 9 13 15 13 15 21"/>
+  </symbol>
+
+  <!-- Card: Entrepreneur -->
+  <symbol id="icon-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 15c-1.5-1.5-3-3-3-5 0-2 1-4 3-6 2 2 3 4 3 6 0 2-1.5 3.5-3 5z"/>
+    <path d="M9 10l-3 1-2 4 4-1"/>
+    <path d="M15 10l3 1 2 4-4-1"/>
+    <path d="M10 16c0 2-1 3-2 4 2 0 3-1 4-2"/>
+    <path d="M14 16c0 2 1 3 2 4-2 0-3-1-4-2"/>
+    <circle cx="12" cy="8" r="1.2"/>
+  </symbol>
+
+  <!-- Card: Security Officer -->
+  <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3z"/>
+    <polyline points="9.5 12 11 13.5 14.5 10"/>
+  </symbol>
+
+  <!-- Interest: Chess -->
+  <symbol id="icon-chess" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 20h8"/>
+    <path d="M9 20v-3c-1.5-1-2-2.5-2-4 0-2 1-3.5 2.5-4.5"/>
+    <path d="M15 20v-3c1.5-1 2-2.5 2-4 0-2-1-3.5-2.5-4.5"/>
+    <path d="M9.5 8.5c0-2 1-3.5 2.5-4.5 1.5 1 2.5 2.5 2.5 4.5"/>
+    <circle cx="12" cy="6" r="1"/>
+    <path d="M8 4l1.5-1M16 4l-1.5-1"/>
+  </symbol>
+
+  <!-- Interest: Philosophy / Reading -->
+  <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 6c-1.5-1-3-1.5-5-1.5-1.5 0-3 .5-4 1.5v13c1-1 2.5-1.5 4-1.5 2 0 3.5.5 5 1.5"/>
+    <path d="M12 6c1.5-1 3-1.5 5-1.5 1.5 0 3 .5 4 1.5v13c-1-1-2.5-1.5-4-1.5-2 0-3.5.5-5 1.5"/>
+    <line x1="12" y1="6" x2="12" y2="19"/>
+  </symbol>
+
+  <!-- Interest: Faith & Purpose -->
+  <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/>
+    <path d="M17 3l.5 1.5L19 5l-1.5.5L17 7l-.5-1.5L15 5l1.5-.5L17 3z"/>
+  </symbol>
+
+  <!-- Interest: Business -->
+  <symbol id="icon-trending-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="3 17 9 11 13 15 21 7"/>
+    <polyline points="15 7 21 7 21 13"/>
+  </symbol>
+
+  <!-- Contact: Email -->
+  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="5" width="18" height="14" rx="2"/>
+    <polyline points="3 7 12 13 21 7"/>
+  </symbol>
+
+  <!-- Contact: WhatsApp / Message -->
+  <symbol id="icon-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.5 0-3-.4-4.2-1L3 21l1.9-5.3A8.5 8.5 0 1 1 21 11.5z"/>
+    <polyline points="8.5 10 10 11.5 12.5 9 14 10.5"/>
+  </symbol>
+
+  <!-- Social: Instagram -->
+  <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="5"/>
+    <circle cx="12" cy="12" r="4"/>
+    <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+  </symbol>
+
+  <!-- Social: YouTube -->
+  <symbol id="icon-youtube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2.5" y="6" width="19" height="12" rx="3"/>
+    <polygon points="10 9 15 12 10 15 10 9" fill="currentColor" stroke="none"/>
+  </symbol>
+
+  <!-- Social: LinkedIn -->
+  <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="2"/>
+    <line x1="7.5" y1="10" x2="7.5" y2="17"/>
+    <circle cx="7.5" cy="7.5" r="0.8" fill="currentColor" stroke="none"/>
+    <polyline points="12 17 12 10 12 11.5"/>
+    <path d="M12 13c0-1.5 1-2.5 2.5-2.5S17 12 17 13.5V17"/>
+  </symbol>
+
+  <!-- Social: Facebook -->
+  <symbol id="icon-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="2"/>
+    <polyline points="14.5 8 16.5 8 16.5 5.5 14 5.5"/>
+    <path d="M14.5 8c-1.5 0-2.5 1-2.5 2.5V17"/>
+    <line x1="9.5" y1="11.5" x2="14.5" y2="11.5"/>
+  </symbol>
+
+  <!-- Social: TikTok / Music -->
+  <symbol id="icon-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 18V5l11-2v13"/>
+    <circle cx="6" cy="18" r="3"/>
+    <circle cx="17" cy="16" r="3"/>
+  </symbol>
+
+  <!-- Social: GitHub -->
+  <symbol id="icon-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 19c-4.3 1.3-4.3-2.2-6-2.7m12 5v-3.5c0-1 .1-1.5-.5-2 2.8-.3 5.5-1.4 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.4 4.4 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6.2 0C6.3 2.3 5.3 2.6 5.3 2.6a4.4 4.4 0 0 0-.1 3.2A4.7 4.7 0 0 0 4 9c0 4.6 2.7 5.7 5.5 6-.6.5-.6 1.2-.5 2V21"/>
+  </symbol>
+
+  <!-- Lightbox: Close -->
+  <symbol id="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="6" y1="6" x2="18" y2="18"/>
+    <line x1="18" y1="6" x2="6" y2="18"/>
+  </symbol>
+
+  <!-- Lightbox: Prev -->
+  <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="15 5 8 12 15 19"/>
+  </symbol>
+
+  <!-- Lightbox: Next -->
+  <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="9 5 16 12 9 19"/>
+  </symbol>
+
+</svg>
