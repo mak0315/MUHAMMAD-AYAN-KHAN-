@@ -246,6 +246,30 @@
     }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
+    /* Hero identity statement */
+    .hero-identity {
+      display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0 12px;
+      margin-bottom: 34px;
+      animation: fadeUp 1s ease both;
+    }
+    .hero-identity .id-first {
+      font-family: var(--font-display);
+      font-size: clamp(1.05rem, 2.6vw, 1.5rem);
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .hero-identity .id-sep {
+      width: 5px; height: 5px; background: var(--gold);
+      border-radius: 50%; animation: blink 2s ease infinite;
+      flex-shrink: 0;
+    }
+    .hero-identity .id-second {
+      font-family: var(--font-display);
+      font-size: clamp(1.05rem, 2.6vw, 1.5rem);
+      font-weight: 400; font-style: italic; letter-spacing: 0.03em;
+      color: var(--ivory);
+    }
+
     .hero-name {
       font-family: var(--font-display);
       font-size: clamp(3.8rem, 9vw, 8.5rem);
@@ -966,6 +990,8 @@
       .hero-eyebrow { justify-content: center; }
       .hero-name { font-size: clamp(3rem, 13vw, 4.8rem); }
       .hero-eyebrow { font-size: 0.55rem; margin-bottom: 22px; }
+      .hero-identity { justify-content: center; margin-bottom: 22px; gap: 0 9px; }
+      .hero-identity .id-first, .hero-identity .id-second { font-size: clamp(0.85rem, 3.8vw, 1.2rem); }
       .hero-cycling { text-align: center; }
       .hero-roles { margin-top: 20px; gap: 7px; justify-content: center; }
       .role-pill { font-size: 0.54rem; padding: 5px 11px; }
@@ -1022,6 +1048,8 @@
       .photo-grid { grid-template-columns: 1fr; }
       .photo-cell { height: 240px !important; }
       .photo-cell:first-child { grid-column: 1; height: 260px !important; }
+      .hero-identity { flex-direction: column; gap: 6px; align-items: center; }
+      .hero-identity .id-sep { display: none; }
     }
   </style>
 </head>
@@ -1078,14 +1106,17 @@
   <div class="hero-grid"></div>
   <div class="hero-vline"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow"><span class="eyebrow-dot"></span>Founder · Author · Creator</div>
+    <div class="hero-identity">
+      <span class="id-first">JACK OF ALL.</span>
+      <span class="id-sep"></span>
+      <span class="id-second">MASTER OF NONE.</span>
+    </div>
     <h1 class="hero-name">Muhammad <em>Ayan Khan</em></h1>
 
     <!-- Cycling roles -->
     <div class="hero-cycling" id="heroCycling">
       <span class="hero-cycling-text active">Founder</span>
       <span class="hero-cycling-text">Entrepreneur</span>
-      <span class="hero-cycling-text">Author</span>
       <span class="hero-cycling-text">Photographer</span>
       <span class="hero-cycling-text">Web Developer</span>
       <span class="hero-cycling-text">BBIT Student</span>
@@ -1094,7 +1125,6 @@
     <div class="hero-roles">
       <span class="role-pill">Founder</span>
       <span class="role-pill">Entrepreneur</span>
-      <span class="role-pill">Author</span>
       <span class="role-pill">Photographer</span>
       <span class="role-pill">Web Developer</span>
       <span class="role-pill">BBIT Student</span>
