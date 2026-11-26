@@ -1,0 +1,259 @@
+/* ============================================================
+   icons.css — shared SVG icon system
+   Lucide UI glyphs (1.6px stroke, round caps/joins) and official
+   monochrome brand marks. No backgrounds, no icon containers.
+   ============================================================ */
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  vertical-align: middle;
+  color: inherit;
+  transition: color .25s ease, opacity .25s ease, transform .25s ease;
+}
+
+.icon use { pointer-events: none; }
+
+/* Brand marks are filled by design; everything else is outline. */
+.brand-icon { fill: currentColor; stroke: none; }
+
+.icon--xs { width: 12px; height: 12px; }
+.icon--sm { width: 14px; height: 14px; }
+.icon--lg { width: 24px; height: 24px; }
+
+/* ---------- Navigation ---------- */
+.nav-links a,
+.site-nav a,
+.mobile-menu a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nav-links .icon,
+.site-nav .icon {
+  width: 13px;
+  height: 13px;
+  opacity: .68;
+}
+
+.mobile-menu a .icon {
+  width: 18px;
+  height: 18px;
+  opacity: .65;
+}
+
+.nav-links a:hover .icon,
+.site-nav a:hover .icon,
+.site-nav a[aria-current="page"] .icon,
+.mobile-menu a:hover .icon {
+  color: var(--gold);
+  opacity: 1;
+}
+
+.nav-burger .icon {
+  width: 24px;
+  height: 24px;
+  color: var(--gold);
+}
+.nav-burger .burger-close { display: none; }
+.nav-burger.open .burger-open { display: none; }
+.nav-burger.open .burger-close { display: inline-block; }
+.nav-burger:hover .icon { transform: scale(1.05); }
+
+/* ---------- Section labels ---------- */
+.section-label .icon,
+.section-number .icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  color: var(--gold);
+  vertical-align: -3px;
+  opacity: .9;
+}
+
+/* ---------- Cards, projects, interests ---------- */
+.card-icon .icon { width: 30px; height: 30px; color: var(--gold); }
+.interest-icon .icon { width: 34px; height: 34px; color: var(--gold); }
+
+.card > .icon,
+.entry > .icon {
+  display: block;
+  width: 23px;
+  height: 23px;
+  margin-bottom: 14px;
+  color: var(--gold);
+}
+
+.project-name,
+.exp-card__role {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.project-name .icon,
+.exp-card__role .icon {
+  width: 16px;
+  height: 16px;
+  color: var(--gold);
+  opacity: .9;
+}
+
+.card:hover > .icon,
+.entry:hover > .icon,
+.project-card:hover .project-name .icon,
+.exp-card:hover .exp-card__role .icon {
+  transform: translateY(-1px);
+}
+
+/* ---------- Skills and technologies ---------- */
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.skill-chip .icon {
+  width: 13px;
+  height: 13px;
+  color: var(--gold);
+  opacity: .82;
+}
+
+.skill-chip:hover .icon { opacity: 1; }
+
+/* ---------- Contact and social ---------- */
+.contact-item .icon {
+  width: 20px;
+  height: 20px;
+  color: var(--gold);
+}
+
+.soc-icon .icon,
+.insta-link .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.social-link:hover .soc-icon .icon,
+.insta-link:hover .icon {
+  color: var(--gold);
+}
+
+.submit-btn .icon,
+.form-submit .icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 8px;
+}
+
+/* ---------- Link affordances ---------- */
+.link-arrow {
+  width: 12px;
+  height: 12px;
+  margin-left: 7px;
+  opacity: .75;
+}
+
+a:hover .link-arrow,
+button:hover .link-arrow {
+  color: var(--gold);
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+.f-links a,
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.f-links .icon,
+.footer-links .icon {
+  width: 13px;
+  height: 13px;
+  opacity: .7;
+}
+
+.f-links a:hover .icon,
+.footer-links a:hover .icon {
+  color: var(--gold);
+  opacity: 1;
+}
+
+/* ---------- FAQ ---------- */
+.faq-item summary .icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary .icon { transform: rotate(180deg); }
+
+/* ---------- Photography ---------- */
+.filter-btn .icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
+  vertical-align: -2px;
+  opacity: .7;
+}
+
+.filter-btn.on .icon,
+.filter-btn:hover .icon {
+  color: var(--gold);
+  opacity: 1;
+}
+
+.hero-tag .icon,
+.insta-section h2 .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 9px;
+  color: var(--gold);
+  vertical-align: -3px;
+}
+
+.lb-close .icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: -3px;
+}
+
+.lb-btn .icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: -2px;
+  margin: 0 3px;
+}
+
+.nav-back .icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
+  vertical-align: -2px;
+}
+
+/* ---------- Interaction polish ---------- */
+a:hover .icon,
+button:hover .icon {
+  color: var(--gold);
+}
+
+@media (max-width: 560px) {
+  .nav-links .icon, .site-nav .icon { width: 12px; height: 12px; }
+  .card-icon .icon { width: 27px; height: 27px; }
+  .interest-icon .icon { width: 31px; height: 31px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon { transition: none; }
+  a:hover .link-arrow, button:hover .link-arrow { transform: none; }
+}

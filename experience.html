@@ -26,6 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="page-styles.css">
+  <link rel="stylesheet" href="icons.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -208,15 +209,15 @@
 <header class="page-header" id="nav">
   <a href="/" class="nav-logo">M · A · K</a>
   <ul class="site-nav" aria-label="Main navigation">
-    <li><a href="/">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="startups.html">Startups</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="experience.html" aria-current="page">Experience</a></li>
-    <li><a href="creative.html">Creative</a></li>
-    <li><a href="writing.html">Writing</a></li>
-    <li><a href="interests.html">Interests</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="/"><svg class="icon nav-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-house"/></svg>Home</a></li>
+    <li><a href="about.html"><svg class="icon nav-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-user"/></svg>About</a></li>
+    <li><a href="startups.html"><svg class="icon nav-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-rocket"/></svg>Startups</a></li>
+    <li><a href="projects.html"><svg class="icon nav-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-layers"/></svg>Projects</a></li>
+    <li><a href="experience.html" aria-current="page"><svg class="icon nav-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-briefcase"/></svg>Experience</a></li>
+    <li><a href="creative.html"><svg class="icon nav-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-clapperboard"/></svg>Creative</a></li>
+    <li><a href="writing.html"><svg class="icon nav-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-pen"/></svg>Writing</a></li>
+    <li><a href="interests.html"><svg class="icon nav-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-sparkles"/></svg>Interests</a></li>
+    <li><a href="contact.html"><svg class="icon nav-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-mail"/></svg>Contact</a></li>
   </ul>
 </header>
 
@@ -230,62 +231,71 @@
   <div class="page-main">
 
     <section class="page-section" id="timeline">
-      <span class="section-number">01 — Experience</span>
+      <span class="section-number"><svg class="icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-briefcase"/></svg>01 — Experience</span>
       <h2 class="section-heading">Chronological <em>Timeline</em></h2>
       <p class="lead">Sorted newest first. Roles, ventures, and education in order.</p>
       <div class="entry">
         <div class="meta">Ongoing · Pakistan</div>
-        <h3>BBIT Student — Virtual University</h3>
+        <svg class="icon entry-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-graduation-cap"/></svg>
+          <h3>BBIT Student — Virtual University</h3>
         <p>Bachelor of Business Information Technology — currently pursuing; not yet completed.</p>
       </div>
       <div class="entry">
         <div class="meta">One month · Islamabad, Pakistan</div>
-        <h3>Sales — MGC Developments</h3>
+        <svg class="icon entry-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-coins"/></svg>
+          <h3>Sales — MGC Developments</h3>
         <p>Worked in sales to understand the business from the inside.</p>
       </div>
       <div class="entry">
         <div class="meta">Co-founder · Pakistan</div>
-        <h3>SA Real Estate</h3>
+        <svg class="icon entry-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-building"/></svg>
+          <h3>SA Real Estate</h3>
         <p>Co-founded a local real estate business operating in Islamabad.</p>
-        <div class="link-row"><a href="sa-real-estate.html">Project page →</a></div>
+        <div class="link-row"><a href="sa-real-estate.html">Project page<svg class="icon link-arrow" aria-hidden="true" focusable="false"><use href="icons.svg#icon-arrow-right"/></svg></a></div>
       </div>
       <div class="entry">
         <div class="meta">Founder · Pakistan</div>
-        <h3>MK Real Estate</h3>
+        <svg class="icon entry-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-building"/></svg>
+          <h3>MK Real Estate</h3>
         <p>Founded a local real estate business operating in Islamabad.</p>
       </div>
       <div class="entry">
         <div class="meta">Founder · Islamabad, Pakistan</div>
-        <h3>Kor Da</h3>
+        <svg class="icon entry-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-rocket"/></svg>
+          <h3>Kor Da</h3>
         <p>Founder of a verified short-term rental marketplace for Pakistan, beginning in Islamabad.</p>
-        <div class="link-row"><a href="kor-da.html">Venture page →</a></div>
+        <div class="link-row"><a href="kor-da.html">Venture page<svg class="icon link-arrow" aria-hidden="true" focusable="false"><use href="icons.svg#icon-arrow-right"/></svg></a></div>
       </div>
       <div class="entry">
         <div class="meta">Founder · Pakistan</div>
-        <h3>Pactum Escrow</h3>
+        <svg class="icon entry-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-scale"/></svg>
+          <h3>Pactum Escrow</h3>
         <p>Founder of a trust-based escrow service for secure payments and dispute resolution.</p>
-        <div class="link-row"><a href="pactum.html">Venture page →</a></div>
+        <div class="link-row"><a href="pactum.html">Venture page<svg class="icon link-arrow" aria-hidden="true" focusable="false"><use href="icons.svg#icon-arrow-right"/></svg></a></div>
       </div>
       <div class="entry">
         <div class="meta">Founder and first captain · Havelian, Pakistan</div>
-        <h3>Havelian Kings</h3>
+        <svg class="icon entry-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-trophy"/></svg>
+          <h3>Havelian Kings</h3>
         <p>Founded a club cricket initiative and served as its first captain.</p>
       </div>
       <div class="entry">
         <div class="meta">Former · Doha, Qatar</div>
-        <h3>Security Officer — Golden Eagle Security (GES)</h3>
+        <svg class="icon entry-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-shield"/></svg>
+          <h3>Security Officer — Golden Eagle Security (GES)</h3>
         <p>International experience in a high-responsibility role that shaped discipline, pressure handling and leadership.</p>
       </div>
       <div class="entry">
         <div class="meta">Published · Global</div>
-        <h3>Author — Hope That Never Ends</h3>
+        <svg class="icon entry-icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-book"/></svg>
+          <h3>Author — Hope That Never Ends</h3>
         <p>Author of the motivational book on dua and hope, available on Amazon.</p>
-        <div class="link-row"><a href="writing.html">Writing page →</a></div>
+        <div class="link-row"><a href="writing.html">Writing page<svg class="icon link-arrow" aria-hidden="true" focusable="false"><use href="icons.svg#icon-arrow-right"/></svg></a></div>
       </div>
     </section>
 
     <section class="page-section" id="skills">
-      <span class="section-number">02 — Skills</span>
+      <span class="section-number"><svg class="icon" aria-hidden="true" focusable="false"><use href="icons.svg#icon-layers"/></svg>02 — Skills</span>
       <h2 class="section-heading">Skills &amp; <em>Strengths</em></h2>
       <p>Presented in categories without arbitrary percentage ratings.</p>
       <h3>Build</h3>
@@ -295,7 +305,7 @@
       <h3>Lead</h3>
       <ul class="plain-list"><li>Entrepreneurship</li><li>Property Management</li><li>Security Management</li><li>Leadership</li></ul>
       <p>Languages: Urdu, Punjabi and Hindko (native); English (fluent).</p>
-      <div class="link-row"><a href="projects.html">See the web work →</a><a href="creative.html">See creative work →</a></div>
+      <div class="link-row"><a href="projects.html">See the web work<svg class="icon link-arrow" aria-hidden="true" focusable="false"><use href="icons.svg#icon-arrow-right"/></svg></a><a href="creative.html">See creative work<svg class="icon link-arrow" aria-hidden="true" focusable="false"><use href="icons.svg#icon-arrow-right"/></svg></a></div>
     </section>
 
   </div>
